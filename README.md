@@ -3,6 +3,8 @@
 Parses `stdin` as an email for a List-Unsubscribe header. Finds any URL present,
 and `curl`s it.
 
+*Note: recently hacked together, might not work, etc...*
+
 ## Installation
 
 *TODO: AUR package*
