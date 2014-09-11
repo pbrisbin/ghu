@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+# pbrisbin 2014
+#
+###
+share="$(dirname "$0")"/../share/ghu
+unsubscribe="$("$share"/ghu-parse)" && [ -n "$unsubscribe" ] || exit 1
+
+curl -# "$unsubscribe" >/dev/null && printf "OK\n"

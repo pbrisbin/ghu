@@ -1,0 +1,73 @@
+Delivered-To: pat@thoughtbot.com
+Received: by 10.76.131.230 with SMTP id op6csp554325oab;
+        Thu, 11 Sep 2014 06:39:19 -0700 (PDT)
+X-Received: by 10.42.83.131 with SMTP id h3mr1971533icl.77.1410442759540;
+        Thu, 11 Sep 2014 06:39:19 -0700 (PDT)
+Return-Path: <bounces+848413-f62d-pat=thoughtbot.com@sgmail.github.com>
+Received: from o5.sgmail.github.com (o5.sgmail.github.com. [192.254.113.10])
+        by mx.google.com with SMTP id qg1si1232437igb.3.2014.09.11.06.39.18
+        for <pat@thoughtbot.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 11 Sep 2014 06:39:19 -0700 (PDT)
+Received-SPF: none (google.com: bounces+848413-f62d-pat=thoughtbot.com@sgmail.github.com does not designate permitted sender hosts) client-ip=192.254.113.10;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: bounces+848413-f62d-pat=thoughtbot.com@sgmail.github.com does not designate permitted sender hosts) smtp.mail=bounces+848413-f62d-pat=thoughtbot.com@sgmail.github.com;
+       dkim=pass header.i=@sgmail.github.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=github.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=sgmail.github.com; 
+	h=from:reply-to:to:cc:in-reply-to:references:subject:mime-version:content-type:content-transfer-encoding:list-id:list-archive:list-post:list-unsubscribe; 
+	s=smtpapi; bh=eMnYCsfgbeW1e+iVw7RLd3TV6hM=; b=BL28Mka1yKkfA2Oqac
+	EijEr98W8CFFPU/W0zYXTiu0rGLNSfCKXubzUnL2SZdFts9+ciwSHXQyo2CJax+r
+	9t09ofgzsPvvKkp4jIek6LG0qddXoU589V8wbailx2gYP31f/UyZOrEyPVu8B/W3
+	QRXWH40FJdxYPiqQIKpZwGNgE=
+Received: by mf190.sendgrid.net with SMTP id mf190.37204.5411A5FD1A
+        2014-09-11 13:39:09.591069014 +0000 UTC
+Received: from github-smtp2a-ext-cp1-prd.iad.github.net (github-smtp2a-ext-cp1-prd.iad.github.net [192.30.253.16])
+	by ismtpd-031.iad1.sendgrid.net (SG) with ESMTP id 14864f0662f.4113.2d32ab
+	for <pat@thoughtbot.com>; Thu, 11 Sep 2014 13:39:09 +0000 (GMT)
+Date: Thu, 11 Sep 2014 06:39:09 -0700
+From: Mike Burns <notifications@github.com>
+Reply-To: thoughtbot/dotfiles <reply+i-42522423-16da59d19f04d4424e6937ac2c382d086b09e643-50812@reply.github.com>
+To: thoughtbot/dotfiles <dotfiles@noreply.github.com>
+Cc: pat brisbin <pat@thoughtbot.com>
+Message-ID: <thoughtbot/dotfiles/pull/300/c55264611@github.com>
+In-Reply-To: <thoughtbot/dotfiles/pull/300@github.com>
+References: <thoughtbot/dotfiles/pull/300@github.com>
+Subject: Re: [dotfiles] Change rename.vim to Tim Pope's vim-eunuch (#300)
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5411a5fd2d229_7b193fcab00812bc2354111";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Precedence: list
+X-GitHub-Recipient: pbrisbin
+X-GitHub-Reason: mention
+List-ID: thoughtbot/dotfiles <dotfiles.thoughtbot.github.com>
+List-Archive: https://github.com/thoughtbot/dotfiles
+List-Post: <mailto:reply+i-42522423-16da59d19f04d4424e6937ac2c382d086b09e643-50812@reply.github.com>
+List-Unsubscribe: <mailto:unsub+i-42522423-16da59d19f04d4424e6937ac2c382d086b09e643-50812@reply.github.com>,
+ <https://github.com/notifications/unsubscribe/50812__eyJzY29wZSI6Ik5ld3NpZXM6TXV0ZSIsImV4cGlyZXMiOjE3MjYwNjE5NDksImRhdGEiOnsiaWQiOjQyMTk5ODMyfX0=--73b54a36b04981938dc13727f1f87dbc58c880d5>
+X-Auto-Response-Suppress: All
+X-GitHub-Recipient-Address: pat@thoughtbot.com
+X-SG-EID: DjmvZGInpkLVoDDCc9tkQx4qmZzgymGzoWpp7jyjNs+7/xYFIQ8ikEQvT2TfQojJFrFnvbdReFWF8JK96OGm8LMoX3PbxEJxq9I3j5xiaqJ3L7EZlNBQ65smRKxs2iIHB58CNXPpInkIsp2pk/CrfHvUX1LwdmrgP1ngCzeSGQQ=
+X-TUID: XO6VQGT/XJuZ
+
+----==_mimepart_5411a5fd2d229_7b193fcab00812bc2354111
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Like @pbrisbin says, I am in favor of this change.
+
+---
+Reply to this email directly or view it on GitHub:
+https://github.com/thoughtbot/dotfiles/pull/300#issuecomment-55264611
+----==_mimepart_5411a5fd2d229_7b193fcab00812bc2354111
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Like <a href="https://github.com/pbrisbin" class="user-mention">@pbrisbin</a> says, I am in favor of this change.</p>
+
+<p style="font-size:small;-webkit-text-size-adjust:none;color:#666;">&mdash;<br>Reply to this email directly or <a href="https://github.com/thoughtbot/dotfiles/pull/300#issuecomment-55264611">view it on GitHub</a>.<img alt="" height="1" src="https://github.com/notifications/beacon/50812__eyJzY29wZSI6Ik5ld3NpZXM6QmVhY29uIiwiZXhwaXJlcyI6MTcyNjA2MTk0OSwiZGF0YSI6eyJpZCI6NDIxOTk4MzJ9fQ==--3f33c7f9c29fd07bfdd695b7b6bf7a5032d699ea.gif" width="1" /></p>
+----==_mimepart_5411a5fd2d229_7b193fcab00812bc2354111--
