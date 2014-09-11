@@ -16,7 +16,7 @@ s/^[A-Z].*: //g
   #
   # Result:
   #
-  #    <mailto:...>,
+  #   <mailto:...>,
   #    <https://...>
   #   ...
   #
