@@ -2,7 +2,7 @@
 pkgname=ghu
 pkgver=0.0.3
 pkgrel=1
-pkgdesc="TODO"
+pkgdesc="Unsubscribe from GitHub emails via their List-Unsubscribe header"
 arch=('any')
 url="https://github.com/pbrisbin/$pkgname"
 license=('MIT')
@@ -13,6 +13,8 @@ package() {
   cd "$srcdir/$pkgname-$pkgver"
 
   make DESTDIR="$pkgdir" install
+
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/${pkgname}/LICENSE"
 }
 
 md5sums=('a9ea5baabb2a9eba61cdd9a955871c9b')
