@@ -1,6 +1,6 @@
 # Author: Patrick Brisbin <pbrisbin@gmail.com>
 pkgname=ghu
-pkgver=0.0.2
+pkgver=0.0.3
 pkgrel=1
 pkgdesc="TODO"
 arch=('any')
@@ -15,4 +15,4 @@ package() {
   make DESTDIR="$pkgdir" install
 }
 
-md5sums=('d398e12532b6eb00092d281d8cb8a422')
+md5sums=('a9ea5baabb2a9eba61cdd9a955871c9b')
