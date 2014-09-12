@@ -1,6 +1,6 @@
 # Author: Patrick Brisbin <pbrisbin@gmail.com>
 pkgname=ghu
-pkgver=0.0.3
+pkgver=0.0.4
 pkgrel=1
 pkgdesc="Unsubscribe from GitHub emails via their List-Unsubscribe header"
 arch=('any')
@@ -17,4 +17,4 @@ package() {
   install -Dm644 LICENSE "$pkgdir/usr/share/licenses/${pkgname}/LICENSE"
 }
 
-md5sums=('a9ea5baabb2a9eba61cdd9a955871c9b')
+md5sums=('e2513fa04d2bff2697605fd98269df53')
