@@ -1,27 +1,63 @@
 # GitHub Unsubscribe
 
-Parses `stdin` as an email for a List-Unsubscribe header. Finds any URL present,
-and `curl`s it.
+```
+Usage: ghu [options] < file
 
-*Note: recently hacked together, might not work, etc...*
+Parse stdin as an email for any List-Unsubscribe header containing a URL. Visit
+that URL using curl, thereby unsubscribing you from the thread.
+
+Options:
+  -o, --open    Open the unsubscribe link with $BROWSER, not curl
+  -p, --print   Print the unsubscribe link, do not visit it
+
+```
+
+The only thing GitHub-specific is that after we `curl` the URL, we check the
+HTML response for a bit of text to show that you have been unsubscribed. Beyond
+that, this tool could be used on any email containing a List-Unsubscribe header
+with a URL.
 
 ## Installation
 
-*TODO: AUR package*
+*TODO: make install, AUR package*
 
-## Usage
+For now,
 
-```
-$ ghu < example.mail
-```
+- Clone the repository somewhere
+- Use the `/full/path/to/bin/ghu`
 
 ## Usage with Mutt
 
 ```
 # .muttrc
-macro ,u <
+macro index ,u \
  "<enter-command>set my_old_pipe_decode=\$pipe_decode nopipe_decode<enter>\
- "<enter-command>pipe_message ghu<enter>\
- "<enter-command>set pipe_decode=\$my_old_pipe_decode<enter>" \
+ <enter-command>pipe_message /path/to/bin/ghu<enter>\
+ <enter-command>set pipe_decode=\$my_old_pipe_decode<enter>" \
  "Unsubscribe from any email with a List-Unsubscribe header"
 ```
+
+## OSX Users
+
+This tool relies on the presence of `/bin/sh` and `/bin/sed`. The former you
+likely have, the latter you likely do not.
+
+You could fix this by running:
+
+```
+# ln -s $(which sed) /bin/sed
+```
+
+The `--open` option relies on the environment variable `$BROWSER`, which you
+likely do not have set.
+
+You could fix this by adding
+
+```sh
+export BROWSER='open'
+```
+
+To your shell initialization.
+
+I will not be addressing these concerns myself, but welcome any PRs that do, so
+long as the behavior on Linux is unchanged.
