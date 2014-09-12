@@ -19,12 +19,12 @@ with a URL.
 
 ## Installation
 
-*TODO: make install, AUR package*
+ghu is available in the [AUR](https://aur.archlinux.org/packages/gh/ghu).
 
-For now,
+Non-Arch users can clone the repo and either
 
-- Clone the repository somewhere
-- Use the `/full/path/to/bin/ghu`
+- Always invoke `/full/path/to/bin/ghu`, or
+- Use `make install`, the default prefix is `/usr/local`
 
 ## Usage with Mutt
 
@@ -32,7 +32,7 @@ For now,
 # .muttrc
 macro index ,u \
  "<enter-command>set my_old_pipe_decode=\$pipe_decode nopipe_decode<enter>\
- <enter-command>pipe_message /path/to/bin/ghu<enter>\
+ <enter-command>pipe_message ghu<enter>\
  <enter-command>set pipe_decode=\$my_old_pipe_decode<enter>" \
  "Unsubscribe from any email with a List-Unsubscribe header"
 ```
