@@ -19,7 +19,7 @@ with a URL.
 
 ## Installation
 
-ghu is available in the [AUR](https://aur.archlinux.org/packages/gh/ghu).
+ghu is available in the [AUR](https://aur.archlinux.org/packages/ghu).
 
 Non-Arch users can clone the repo and either
 
