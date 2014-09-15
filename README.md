@@ -30,9 +30,9 @@ Non-Arch users can clone the repo and either
 
 ```
 # .muttrc
-macro index ,u \
+macro index,pager ,u \
  "<enter-command>set my_old_pipe_decode=\$pipe_decode nopipe_decode<enter>\
- <enter-command>pipe_message ghu<enter>\
+ | ghu<enter>\
  <enter-command>set pipe_decode=\$my_old_pipe_decode<enter>" \
  "Unsubscribe from any email with a List-Unsubscribe header"
 ```
