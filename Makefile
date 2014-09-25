@@ -52,7 +52,7 @@ release: test dist gh_pages
 release_aur: pkgbuild
 	mkaurball
 	aur-submit $(NAME)-$(VERSION)-$(RELEASE).src.tar.gz
-	git tag -a -m v$(VERSION) v$(VERSION)
+	git tag -s -m v$(VERSION) v$(VERSION)
 	rm -f $(NAME)-$(VERSION).tar.gz
 	rm -f $(NAME)-$(VERSION)-$(RELEASE).src.tar.gz
 	rm -f $(NAME)-$(VERSION)-$(RELEASE)-any.pkg.tar.xz
