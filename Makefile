@@ -1,6 +1,6 @@
 NAME    = ghu
 VERSION = 0.0.4
-RELEASE = 2
+RELEASE = 3
 AUTHOR  = pbrisbin
 URL     = https://github.com/$(AUTHOR)/$(NAME)
 
@@ -39,7 +39,11 @@ submit: pkg/$(NAME)-$(VERSION)-$(RELEASE).src.tar.gz
 	rm -f pkg/$(NAME)-$(VERSION)-$(RELEASE).src.tar.gz
 
 release: test dist package submit
-	git status
+	git add dist/$(NAME)-$(VERSION).tar.gz
+	git add pkg/PKGBUILD
+	git tag -s -m v$(VERSION)-$(RELEASE) v$(VERSION)-$(RELEASE)
+	git push
+	git push --tags
 
 install: ghu ghu-parse
 	install -D -m755 ghu $(DESTDIR)$(PREFIX)/bin/ghu
