@@ -36,19 +36,3 @@ macro index,pager ,u \
  <enter-command>set pipe_decode=\$my_old_pipe_decode<enter>" \
  "Unsubscribe from any email with a List-Unsubscribe header"
 ```
-
-## OSX Users
-
-The `--open` option relies on the environment variable `$BROWSER`, which you
-likely do not have set.
-
-You could fix this by adding
-
-```sh
-export BROWSER='open'
-```
-
-To your shell initialization.
-
-I will not be addressing these concerns myself, but welcome any PRs that do, so
-long as the behavior on Linux is unchanged.
