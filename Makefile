@@ -4,7 +4,7 @@ RELEASE = 3
 AUTHOR  = pbrisbin
 URL     = https://github.com/$(AUTHOR)/$(NAME)
 
-DISTFILES = LICENSE Makefile bin/ghu share/ghu/ghu-parse
+DISTFILES = LICENSE Makefile bin/ghu share/ghu/parse-header
 
 PREFIX ?= /usr/local
 
@@ -46,8 +46,8 @@ release: test dist package submit
 	git push
 	git push --tags
 
-install: ghu ghu-parse
+install: ghu parse-header
 	install -D -m755 ghu $(DESTDIR)$(PREFIX)/bin/ghu
-	install -D -m755 ghu-parse $(DESTDIR)$(PREFIX)/share/ghu/ghu-parse
+	install -D -m755 parse-header $(DESTDIR)$(PREFIX)/share/ghu/parse-header
 
 .PHONY: test pkgver

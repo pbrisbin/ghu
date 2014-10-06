@@ -39,15 +39,6 @@ macro index,pager ,u \
 
 ## OSX Users
 
-This tool relies on the presence of `/bin/sh` and `/bin/sed`. The former you
-likely have, the latter you likely do not.
-
-You could fix this by running:
-
-```
-# ln -s $(which sed) /bin/sed
-```
-
 The `--open` option relies on the environment variable `$BROWSER`, which you
 likely do not have set.
 
