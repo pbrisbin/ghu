@@ -41,6 +41,7 @@ submit: pkg/$(NAME)-$(VERSION)-$(RELEASE).src.tar.gz
 release: test dist package submit
 	git add dist/$(NAME)-$(VERSION).tar.gz
 	git add pkg/PKGBUILD
+	git commit -m "Releasing $(VERSION)-$(RELEASE)"
 	git tag -s -m v$(VERSION)-$(RELEASE) v$(VERSION)-$(RELEASE)
 	git push
 	git push --tags
